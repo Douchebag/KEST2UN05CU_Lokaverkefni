@@ -8,7 +8,6 @@ Router(config-line)#line vty 0 4
 Router(config-line)#password cisco
 Router(config-line)#login
 Router(config-line)#exit
-Router(config)#service password-
 Router(config)#service password-encryption 
 Router(config)#banner motd #Allur adgangur bannadur!#
 Router(config-if)#int g0/2
