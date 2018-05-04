@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Router#conf t
 
 Router(config)#enable secret lokaverk
@@ -21,3 +22,28 @@ ip route hvert+sm hvernig
 R_FIBER config# ip route 11.11.11.0 255.255.255.252 G0/1
 R_FIBER config# ip route 0.0.0.0 0.0.0.0 G0/0
 
+=======
+Router#conf t
+
+Router(config)#enable secret lokaverk
+Router(config)#line con 0
+Router(config-line)#password cisco
+Router(config-line)#login
+Router(config-line)#line vty 0 4
+Router(config-line)#password cisco
+Router(config-line)#login
+Router(config-line)#exit
+Router(config)#service password-encryption 
+Router(config)#banner motd #Allur adgangur bannadur!#
+Router(config-if)#int g0/2
+Router(config-if)#description Tengist with RIX switch sem tengt er tskoli.is
+Router(config-if)#ip add 10.0.1.1 255.255.255.248
+Router(config-if)#no shut
+
+
+ip route hvert+sm hvernig
+
+R_FIBER config# ip route 11.11.11.0 255.255.255.252 G0/1
+R_FIBER config# ip route 0.0.0.0 0.0.0.0 G0/0
+
+>>>>>>> bf73a66a0d716fd989b2e0641fbff09c166f666b
