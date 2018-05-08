@@ -47,3 +47,11 @@ R_FIBER config# ip route 11.11.11.0 255.255.255.252 G0/1
 R_FIBER config# ip route 0.0.0.0 0.0.0.0 G0/0
 
 >>>>>>> bf73a66a0d716fd989b2e0641fbff09c166f666b
+
+ssh
+ip domain-name tskoli.is
+crypto key generate rsa
+ip ssh version 2
+username admin secret cisco
+line vty 0 4
+transport input ssh
